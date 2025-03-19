@@ -6,6 +6,7 @@
     <title>Ashish Mythreya - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- Navigation -->
@@ -32,13 +33,28 @@
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills</h2>
+        <h2>Skills and Languages</h2>
         <ul>
-            <li>Python</li>
-            <li>MERN stack</li>
-            <li>Java</li>
-            <li>Data Structures & Algorithms</li>
-            <li>HTML/CSS/JavaScript (learning)</li>
+            <li>
+                <i class="fab fa-python skill-icon"></i>
+                <span>Python</span>
+            </li>
+            <li>
+                <i class="fab fa-node-js skill-icon"></i>
+                <span>MERN stack</span>
+            </li>
+            <li>
+                <i class="fab fa-java skill-icon"></i>
+                <span>Java</span>
+            </li>
+            <li>
+                <i class="fas fa-code skill-icon"></i>
+                <span>Data Structures & Algorithms</span>
+            </li>
+            <li>
+                <i class="fab fa-html5 skill-icon"></i>
+                <span>HTML/CSS/JavaScript (learning)</span>
+            </li>
         </ul>
     </section>
 
@@ -54,9 +70,37 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:enagandhulaashishmythreya@gmail.com">enagandhulaashishmythreya@gmail.com</a></p>
-        <p><a href="https://www.linkedin.com/in/enagandhula-ashish-mythreya-69953727a" target="_blank">LinkedIn</a></p>
+        <h2>Contact Information</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span><a href="/cdn-cgi/l/email-protection#34111a1513151a101c01101d1d0f14150f14110508140e19051d3c1b111d1510521f1311">[email&#160;protected]</a></span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+91 9392301231</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <span><a href="https://www.linkedin.com/in/enagandhula-ashish-mythreya-69953727a" target="_blank">LinkedIn</a></span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <span><a href="https://github.com/Ashish-Mythreya" target="_blank">GitHub</a></span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-hackerrank"></i>
+                <span><a href="https://www.hackerrank.com/your-profile" target="_blank">HackerRank</a></span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-laptop-code"></i> <!-- Replaced fa-leetcode with fa-laptop-code -->
+                <span><a href="https://leetcode.com/your-profile" target="_blank">LeetCode</a></span>
+            </div>
+            <div class="contact-item resume-item">
+                <i class="fas fa-file-download"></i>
+                <a href="resume.pdf" download>Download Resume</a>
+            </div>
+        </div>
     </section>
 
     <script src="script.js"></script>
