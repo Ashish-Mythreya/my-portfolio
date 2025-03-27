@@ -10,6 +10,8 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    /* Define a CSS variable for the nav height */
+    --nav-height: 4rem; /* Default height for desktop */
 }
 
 /* Navigation */
@@ -42,7 +44,7 @@ nav ul li a:hover {
 
 /* Home Section */
 #home {
-    margin-top: 4rem;
+    margin-top: var(--nav-height); /* Use the CSS variable to set margin-top */
     background: linear-gradient(135deg, #e0e0e0, #bdc3c7);
     padding: 6rem 2rem;
 }
@@ -112,7 +114,7 @@ h1 {
     gap: 0.5rem;
 }
 .skill-category-icon {
-    color: #6b7280; /* Gray color for category icons */
+    color: #6b7280;
     font-size: 1.5rem;
 }
 #skills ul {
@@ -120,7 +122,7 @@ h1 {
     padding: 0;
 }
 #skills ul li {
-    background-color: #f9fafb; /* Light gray background for skill cards */
+    background-color: #f9fafb;
     padding: 0.75rem;
     border-radius: 8px;
     margin-bottom: 0.75rem;
@@ -134,11 +136,11 @@ h1 {
 }
 .skill-icon {
     font-size: 1.2rem;
-    color: #8b5cf6; /* Purple color for skill icons, matching the image */
+    color: #8b5cf6;
 }
 #skills ul li span {
     font-size: 1rem;
-    color: #4b5563; /* Dark gray for skill text */
+    color: #4b5563;
 }
 
 /* Projects Section */
@@ -366,6 +368,10 @@ h1 {
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
+    body {
+        --nav-height: 12rem; /* Adjust for the taller nav on mobile */
+    }
+
     nav {
         padding: 0.8rem;
     }
@@ -379,6 +385,7 @@ h1 {
 
     #home {
         padding: 2rem 1rem;
+        margin-top: var(--nav-height); /* Ensure margin-top adjusts for nav height */
     }
     .home-content {
         flex-direction: column;
@@ -510,6 +517,10 @@ h1 {
 }
 
 @media (max-width: 480px) {
+    body {
+        --nav-height: 12rem; /* Same as 768px, but can adjust if needed */
+    }
+
     .profile-img {
         width: 100px;
     }
