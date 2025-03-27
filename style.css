@@ -8,7 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4; /* Original light background */
+    background-color: #f4f4f4;
     color: #333;
 }
 
@@ -37,13 +37,13 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 nav ul li a:hover {
-    color: #3498db; /* Original hover color */
+    color: #3498db;
 }
 
 /* Home Section */
 #home {
     margin-top: 4rem;
-    background: linear-gradient(135deg, #e0e0e0, #bdc3c7); /* Original gradient */
+    background: linear-gradient(135deg, #e0e0e0, #bdc3c7);
     padding: 6rem 2rem;
 }
 .home-content {
@@ -59,7 +59,7 @@ nav ul li a:hover {
     height: auto;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #3498db; /* Original border color */
+    border: 4px solid #3498db;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .home-text {
@@ -80,38 +80,65 @@ h1 {
 #skills {
     padding: 4rem 2rem;
     text-align: center;
+    background-color: #f4f4f4;
 }
 #skills h2 {
     font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: #2c3e50;
 }
-#skills ul {
-    list-style: none;
+.skills-container {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-#skills ul li {
-    background-color: #3498db; /* Original skill background */
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
+.skill-category {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+}
+.skill-category h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+}
+.skill-category-icon {
+    color: #6b7280; /* Gray color for category icons */
+    font-size: 1.5rem;
+}
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+#skills ul li {
+    background-color: #f9fafb; /* Light gray background for skill cards */
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.3s ease;
 }
 #skills ul li:hover {
-    transform: scale(1.1); /* Original hover scale */
+    transform: scale(1.02);
 }
 .skill-icon {
-    font-size: 20px;
-    margin-right: 0.5rem;
-    color: white;
+    font-size: 1.2rem;
+    color: #8b5cf6; /* Purple color for skill icons, matching the image */
 }
 #skills ul li span {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    color: #4b5563; /* Dark gray for skill text */
 }
 
 /* Projects Section */
@@ -121,13 +148,13 @@ h1 {
 }
 .project {
     margin: 2rem 0;
-    background-color: white; /* Original white background */
+    background-color: white;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .project a {
-    color: #3498db; /* Original link color */
+    color: #3498db;
     text-decoration: none;
     font-weight: 700;
 }
@@ -135,17 +162,142 @@ h1 {
     text-decoration: underline;
 }
 
+/* Education Section */
+#education {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+#education h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.education-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+.education-item:hover {
+    transform: scale(1.05);
+}
+.education-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.education-details {
+    text-align: left;
+}
+.education-details h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+.education-details p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+/* Certificates Section */
+#certificates {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+#certificates h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.certificate-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.certificate-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.certificate-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+.certificate-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.2rem 0;
+}
+.certificate-item p:nth-child(3) {
+    font-size: 0.9rem;
+    color: #777;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* Contact Section */
 #contact {
     padding: 4rem 2rem;
     text-align: center;
-    background-color: #2c3e50; /* Dark background to match the image */
+    background-color: #2c3e50;
     color: white;
 }
 #contact h2 {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
-    color: white; /* Adjusted for dark background */
+    color: white;
 }
 .contact-grid {
     display: grid;
@@ -155,14 +307,15 @@ h1 {
     margin: 0 auto;
 }
 .contact-item {
-    background-color: #34495e; /* Darker shade to complement original palette */
+    background-color: #34495e;
     padding: 1rem;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: left;
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 .contact-item:hover {
     transform: scale(1.05);
@@ -170,24 +323,45 @@ h1 {
 .contact-item i {
     font-size: 24px;
     margin-right: 1rem;
-    color: #3498db; /* Original accent color for icons */
+    color: #3498db;
+    flex-shrink: 0;
 }
 .contact-item span, .contact-item a {
     font-size: 1.1rem;
     color: white;
     text-decoration: none;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    flex: 1;
 }
 .contact-item a:hover {
     text-decoration: underline;
 }
 .resume-item {
-    background-color: #e74c3c; /* Red shade for resume to stand out */
+    background-color: #e74c3c;
 }
 .resume-item i {
     color: white;
 }
 .resume-item a {
     color: white;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+#back-to-top.show {
+    display: block;
 }
 
 /* Media Queries for Mobile */
@@ -229,18 +403,83 @@ h1 {
     #skills h2 {
         font-size: 1.8rem;
     }
-    #skills ul {
-        gap: 1rem;
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-category {
+        width: 100%;
+        max-width: 400px;
     }
     #skills ul li {
-        padding: 0.4rem 0.8rem;
+        padding: 0.6rem;
     }
     .skill-icon {
-        font-size: 18px;
-        margin-right: 0.4rem;
+        font-size: 1.1rem;
     }
     #skills ul li span {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    #projects {
+        padding: 2rem 1rem;
+    }
+    .project {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    #education {
+        padding: 2rem 1rem;
+    }
+    #education h2 {
+        font-size: 1.8rem;
+    }
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .education-item {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    .education-logo {
+        width: 50px;
+        height: 50px;
+    }
+    .education-details {
+        text-align: center;
+    }
+    .education-details h3 {
+        font-size: 1.2rem;
+    }
+    .education-details p {
+        font-size: 0.95rem;
+    }
+
+    #certificates {
+        padding: 2rem 1rem;
+    }
+    #certificates h2 {
+        font-size: 1.8rem;
+    }
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    .certificate-img {
+        height: 120px;
+    }
+    .certificate-item p {
+        font-size: 0.95rem;
+    }
+    .certificate-item p:nth-child(3) {
+        font-size: 0.85rem;
+    }
+    .modal-content {
+        width: 90%;
+        height: 70%;
     }
 
     #contact {
@@ -261,11 +500,6 @@ h1 {
     }
     .contact-item span, .contact-item a {
         font-size: 0.95rem;
-    }
-
-    .project {
-        margin: 1rem 0;
-        padding: 1rem;
     }
     h2 {
         font-size: 1.5rem;
@@ -291,15 +525,52 @@ h1 {
     nav ul li a {
         font-size: 0.9rem;
     }
-    #skills ul li {
-        padding: 0.3rem 0.6rem;
+
+    #skills h2 {
+        font-size: 1.5rem;
+    }
+    .skill-category h3 {
+        font-size: 1.3rem;
     }
     .skill-icon {
-        font-size: 16px;
-        margin-right: 0.3rem;
+        font-size: 1rem;
     }
     #skills ul li span {
+        font-size: 0.9rem;
+    }
+
+    #education h2 {
+        font-size: 1.5rem;
+    }
+    .education-logo {
+        width: 100px;
+        height: 100px;
+    }
+    .education-details h3 {
+        font-size: 1.1rem;
+    }
+    .education-details p {
+        font-size: 0.9rem;
+    }
+
+    #certificates h2 {
+        font-size: 1.5rem;
+    }
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+    .certificate-img {
+        height: 100px;
+    }
+    .certificate-item p {
+        font-size: 0.9rem;
+    }
+    .certificate-item p:nth-child(3) {
         font-size: 0.8rem;
+    }
+    .modal-content {
+        width: 95%;
+        height: 60%;
     }
 
     #contact h2 {
