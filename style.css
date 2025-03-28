@@ -10,41 +10,61 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    /* Define a CSS variable for the nav height */
     --nav-height: 4rem; /* Default height for desktop */
 }
 
 /* Navigation */
 nav {
     background-color: #2c3e50;
-    padding: 1.5rem;
     position: fixed;
     width: 100%;
     top: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
-nav ul {
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ecf0f1;
+    cursor: pointer;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
-nav ul li {
+
+.nav-links li {
     margin: 0 1.5rem;
 }
-nav ul li a {
+
+.nav-links li a {
     color: #ecf0f1;
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
 }
-nav ul li a:hover {
+
+.nav-links li a:hover {
     color: #3498db;
 }
 
 /* Home Section */
 #home {
-    margin-top: var(--nav-height); /* Use the CSS variable to set margin-top */
+    margin-top: var(--nav-height);
     background: linear-gradient(135deg, #e0e0e0, #bdc3c7);
     padding: 6rem 2rem;
 }
@@ -369,23 +389,40 @@ h1 {
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
     body {
-        --nav-height: 12rem; /* Adjust for the taller nav on mobile */
+        --nav-height: 4rem; /* Adjusted for the hamburger menu */
     }
 
-    nav {
-        padding: 0.8rem;
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
     }
-    nav ul {
+
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
         flex-direction: column;
-        align-items: center;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
-    nav ul li {
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-links li {
         margin: 0.5rem 0;
+        text-align: center;
     }
 
     #home {
         padding: 2rem 1rem;
-        margin-top: var(--nav-height); /* Ensure margin-top adjusts for nav height */
+        margin-top: var(--nav-height);
     }
     .home-content {
         flex-direction: column;
@@ -518,7 +555,7 @@ h1 {
 
 @media (max-width: 480px) {
     body {
-        --nav-height: 12rem; /* Same as 768px, but can adjust if needed */
+        --nav-height: 4rem;
     }
 
     .profile-img {
@@ -533,7 +570,7 @@ h1 {
     .about-me, p {
         font-size: 0.9rem;
     }
-    nav ul li a {
+    .nav-links li a {
         font-size: 0.9rem;
     }
 
